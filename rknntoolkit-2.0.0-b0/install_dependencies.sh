@@ -17,3 +17,4 @@ sudo apt install -y \
 # Optionally, you can also install pip packages if needed
 pip install --upgrade pip
 pip install -r pip-requirements-rknn-whl/requirements_cp39-2.0.0b0.txt
+pip install opencv-python tensorflow
