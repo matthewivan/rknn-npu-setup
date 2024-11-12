@@ -17,3 +17,14 @@ You can create a virtual environment for this if u want but it isn't necessary f
 6. install the package wheel based on your python version, cp38 for python38
 7. test library by typing `python` then `from rknnlite.api import RKNNLite`
 
+# Reinstall Rockchip Drivers
+```python
+sudo cp /usr/lib/linux-image-5.10.160-26-rk356x/rockchip/overlays/rk3568-npu-enable.dtbo /boot/dtbo
+sudo u-boot-update
+sudo reboot
+```
+
+# Setup i2c, PWM, etc.
+1. run `sudo rsetup`
+2. pick overlays
+3. tick the boxes of the overlays you want to enable (i2c, PWM, etc.)
