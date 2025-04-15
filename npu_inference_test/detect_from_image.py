@@ -10,7 +10,7 @@ import numpy as np
 OBJ_THRESH = 0.25
 NMS_THRESH = 0.45
 
-IMG_SIZE = (160, 160)  # (width, height), such as (1280, 736)
+IMG_SIZE = (256, 256)  # (width, height), such as (1280, 736)
 
 CLASSES = ('Green_Balloon', 'Orange_Circle_GShape', 'Orange_Square_GShape', 'Orange_Triangle_Gshape', 'Purple_Balloon',
            'Yellow_Circle_GShape', 'Yellow_Square_GShape', 'Yellow_Triangle_Gshape')
@@ -170,7 +170,7 @@ def img_check(path):
 
 if __name__ == '__main__':
     # init var
-    model_path = './dtr_best.rknn'
+    model_path = './cv_models/sample_model_256x256.rknn'
     target = 'rk3566'
     img_folder = './images'
 
