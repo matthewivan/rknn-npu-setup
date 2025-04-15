@@ -11,11 +11,8 @@ You can create a virtual environment for this if u want but it isn't necessary f
 3. query librknnrt.so library version (use `uname -s` or `uname -m` to check system type)
 	- `strings /usr/lib/librknnrt.so | grep -i "librknnrt version"`
 4. run `chmod +x install_dependencies.sh` and `./install_dependecies.sh` when you're in the rknntoolkit directory to install all the dependencies
-5. install requirements under [rknn-toolkit2/rknn-toolkit2](https://github.com/airockchip/rknn-toolkit2/tree/master/rknn-toolkit2/packages) and choose the appropriate python version, cp38 for python 3.8. Additional requirements: ^footnote2
-	- if u get an error when installing tensorflow=2.8.0, just use `pip install tensorflow` instead
-	- `pip install opencv-python`
-6. install the package wheel based on your python version, cp38 for python38
-7. test library by typing `python` then `from rknnlite.api import RKNNLite`
+5. install the package wheel based on your python version, cp38 for python38
+6. test library by typing `python` then `from rknnlite.api import RKNNLite`
 
 # Reinstall Rockchip Drivers
 ```python
@@ -28,3 +25,9 @@ sudo reboot
 1. run `sudo rsetup`
 2. pick overlays
 3. tick the boxes of the overlays you want to enable (i2c, PWM, etc.)
+
+# Max out NPU clock speed/frequency (this has only been tested on a RADXA Zero 3W)
+```bash
+echo userspace > /sys/class/devfreq/fde40000.npu/governor
+echo 900000000 > /sys/class/devfreq/fde40000.npu/userspace/set_freq
+```
