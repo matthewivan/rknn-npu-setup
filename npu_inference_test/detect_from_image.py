@@ -214,6 +214,8 @@ if __name__ == '__main__':
 
         if boxes is not None:
             draw(img_p, co_helper.get_real_box(boxes), scores, classes)
+            for box, score, cl in zip(boxes, scores, classes):
+                print(f"{CLASSES[cl]}: {score}")
 
         if not os.path.exists('./result'):
             os.mkdir('./result')
