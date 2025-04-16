@@ -209,7 +209,7 @@ if __name__ == '__main__':
         inference_time = time.perf_counter() - start_time
 
         print(f"inference time: {inference_time}")
-        print('\n\nIMG: {}'.format(img_name))
+        print('IMG: {}'.format(img_name))
         img_p = img_src.copy()
 
         if boxes is not None:
@@ -222,7 +222,7 @@ if __name__ == '__main__':
 
         result_path = os.path.join('./result', img_name)
         cv2.imwrite(result_path, img_p)
-        print('Detection result save to {}'.format(result_path))
+        print('Detection result save to {}\n\n'.format(result_path))
 
         # cv2.imshow("full post process result", img_p)
         # cv2.waitKeyEx(0)
