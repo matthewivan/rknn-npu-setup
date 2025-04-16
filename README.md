@@ -11,8 +11,7 @@ You can create a virtual environment for this if u want but it isn't necessary f
 3. query librknnrt.so library version (use `uname -s` or `uname -m` to check system type)
 	- `strings /usr/lib/librknnrt.so | grep -i "librknnrt version"`
 4. run `chmod +x install_dependencies.sh` and `./install_dependecies.sh` when you're in the rknntoolkit directory to install all the dependencies
-5. install the package wheel based on your python version, cp38 for python38
-6. test library by typing `python` then `from rknnlite.api import RKNNLite`
+5. test library by typing `python` then `from rknnlite.api import RKNNLite`
 
 # Reinstall Rockchip Drivers
 ```python
