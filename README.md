@@ -27,6 +27,7 @@ sudo reboot
 
 # Max out NPU clock speed/frequency (this has only been tested on a RADXA Zero 3W)
 ```bash
+sudo su
 echo userspace > /sys/class/devfreq/fde40000.npu/governor
 echo 900000000 > /sys/class/devfreq/fde40000.npu/userspace/set_freq
 ```
