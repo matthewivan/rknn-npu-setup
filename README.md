@@ -1,7 +1,8 @@
 # Setup Radxa Zero 3W
 1. Flash the `radxa-zero3_debian_bullseye_xfce_b6.img.xz` file to a micro USB
 2. Edit the wifi ssid and wifi password in `before.txt` located in the `config` partition. To do this, add `connect_wi-fi YOUR_WIFI_SSID YOUR_WIFI_PASSWORD` to the end of the file.
-3. Turn on the Radxa Zero 3W and ssh into it.
+3. Turn on the Radxa Zero 3W and ssh into it. 
+4. Default username: radxa, default password: radxa
 
 # Quick Environment and Inference Setup Guide for Rockchip NPU Boards
 References: 
