@@ -24,10 +24,17 @@ You can create a virtual environment for this if u want but it isn't necessary f
 4. run `chmod +x install_dependencies.sh` and `./install_dependecies.sh` when you're in the rknntoolkit directory to install all the dependencies
 5. test library by typing `python` then `from rknnlite.api import RKNNLite`
 
-### Setup i2c, PWM, etc.
+### Setup i2c, PWM, CSI Camera, etc.
 1. run `sudo rsetup`
 2. pick overlays
-3. tick the boxes of the overlays you want to enable (i2c, PWM, etc.)
+3. tick the boxes of the overlays you want to enable (i2c, PWM, Raspberry Pi Camera v1.3, etc.)
+4. currently supported csi cameras (the camera should still work if the chip is either OV5647 or IMX219):
+	- Raspberry Pi Camera V1.3 (OV5647)
+  	- Raspberry Pi Camera V2 (IMX219)
+	- Radxa Camera 8M (IMX219)
+
+`rsetup` overlay screen:
+![rsetup overlay screen](assets/radxa_zero3w_rsetup_overlay_screen.webp)
 
 ### Max out NPU clock speed/frequency (this has only been tested on a RADXA Zero 3W)
 ```bash
